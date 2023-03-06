@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20230306115654",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "parcel",
+  "fields": [
+    {
+      "fieldName": "parcelNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "size",
+      "fieldType": "ParcelSize",
+      "fieldValues": "SMALL,MEDIUM,LARGE"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Parcel",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "container",
+      "otherEntityRelationshipName": "parcel",
+      "relationshipName": "container",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
