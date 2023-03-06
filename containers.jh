@@ -1,0 +1,26 @@
+enum PackageSize {
+SMALL,
+MEDIUM,
+LARGE
+}
+
+enum ContainerSize {
+SMALL,
+MEDIUM,
+LARGE
+}
+
+entity Package {
+packageNumber String
+size PackageSize
+container Container
+}
+
+entity Container {
+containerNumber String
+size ContainerSize
+}
+
+relationship OneToMany {
+Container{package} to Package{container}
+}
