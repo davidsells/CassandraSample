@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20230306115653",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "container",
+  "fields": [
+    {
+      "fieldName": "containerNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "size",
+      "fieldType": "ContainerSize",
+      "fieldValues": "SMALL,MEDIUM,LARGE"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Container",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "parcel",
+      "otherEntityRelationshipName": "container",
+      "relationshipName": "parcel",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}
