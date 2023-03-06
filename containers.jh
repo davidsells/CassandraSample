@@ -1,0 +1,27 @@
+enum ParcelSize {
+SMALL,
+MEDIUM,
+LARGE
+}
+
+enum ContainerSize {
+SMALL,
+MEDIUM,
+LARGE
+}
+
+entity Container {
+containerNumber String
+size ContainerSize
+}
+
+entity Parcel {
+parcelNumber String
+size ParcelSize
+container Container
+}
+
+
+relationship OneToMany {
+Container{package} to Parcel{container}
+}
